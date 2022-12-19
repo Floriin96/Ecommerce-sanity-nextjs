@@ -7,8 +7,8 @@ import Footer from './Footer';
 const Layout = ({ children }) => {
   return (
     <div className="layout">
-     <Head>
-      <title>Toni-c Richardson</title>
+      <Head>
+        <title>Toni-c Richardson</title>
       </Head>
       <header>
         <Navbar></Navbar>

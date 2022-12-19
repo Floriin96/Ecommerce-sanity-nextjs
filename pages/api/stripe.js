@@ -14,36 +14,28 @@ export default async function handler(req, res) {
           allowed_countries: ['RO'],
         },
         shipping_options: [
-          { shipping_rate: 'shr_1LnTNnAvmGd72MbZ4BmCCof5' },
+          { shipping_rate: 'shr_1MFnq0AvmGd72MbZN1nzRw3g' },
         ],
         line_items: req.body.map((item) => {
-          const img = item. image[0].asset._ref || "";
-          const newImage = img.replace('image-', 'https://cdn.sanity.io/images/hfr502us/production/').replace('-webp', '.webp');
-
+          const img = item.image[0]?.asset?._ref || "";
+          const newImage = img.replace('image-', 'https://cdn.sanity.io/images/sil1fzy6/production/').replace('-webp', '.webp').replace('-jpg', '.jpg')
+          console.log(img, newImage)
           return {
-            
-            price_data: { 
+            price_data: {
               currency: 'ron',
-              product_data: {  
+              product_data: {
                 name: item.name,
                 images: [newImage],
-                
-                
-                     
+                description: "Marimea aleasa este " + item.size
+
               },
               unit_amount: item.price * 100,
             },
-
             adjustable_quantity: {
-              enabled:true,
+              enabled: true,
               minimum: 1,
             },
-            other: {
-              quantity: item.quantity,
-              size: "L"
-            }
-            
-            
+            quantity: item.quantity,
           }
         }),
         success_url: `${req.headers.origin}/?success=true`,

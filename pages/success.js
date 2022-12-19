@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { BsBagCheckFill } from 'react-icons/bs';
 
@@ -26,12 +26,12 @@ const Success = () => {
         <p className="email-msg">Verificati email dumneavoastra</p>
         <p className="description">
           Daca aveti orice intrebare, adresativa la 
-          <a className="email" href="mailto:tonicrichardson@yahoo.com">
-          tonicrichardson@yahoo.com
+          <a className="email" href="mailto:tonicrichardsoncomenzi@gmail.com">
+          tonicrichardsoncomenzi@gmail.com
           </a>
         </p>
         <Link href="/">
-          <button type="button" width="300px" className="btn">
+          <button type="button" width="300px" className="btns">
             Continua cumparaturile
           </button>
         </Link>

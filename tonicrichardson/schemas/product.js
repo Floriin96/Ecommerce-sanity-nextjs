@@ -7,15 +7,15 @@ export default {
             name: 'image',
             title: 'Image',
             type: 'array',
-            of: [{ type:'image' }],
+            of: [{ type: 'image' }],
             options: {
                 hotspot: true,
             }
         },
         {
-           name: 'name' ,
-           title: 'Name',
-           type: 'string',
+            name: 'name',
+            title: 'Name',
+            type: 'string',
         },
         {
             name: 'slug',
@@ -37,33 +37,38 @@ export default {
             type: 'string',
         },
         {
+            title: 'Data adaugari',
+            name: 'dataadaugari',
+            type: 'date'
+          },
+        {
             name: 'sizes',
             title: 'Sizes',
-            type : 'array',
-            of: [{type:"string"}],
+            type: 'array',
+            of: [{ type: "string" }],
             options: {
-                list:[
-                    {title: "XS", value: "XS"},
-                    {title: "S", value: "S"},
-                    {title: "M", value: "M"},
-                    {title: "L", value: "L"},
-                    {title: "XL", value: "XL"},
-                    {title: "XXL", value: "XXL"},
-                    {title: "36", value: "36"},
-                    {title: "37", value: "37"},
-                    {title: "38", value: "38"},
-                    {title: "39", value: "39"},
-                    {title: "40", value: "40"},
-                    {title: "41", value: "41"},
-                    {title: "42", value: "42"},
-                    {title: "43", value: "43"},
-                    {title: "44", value: "44"},
-                    {title: "45", value: "45"},
+                list: [
+                    { title: "XS", value: "XS" },
+                    { title: "S", value: "S" },
+                    { title: "M", value: "M" },
+                    { title: "L", value: "L" },
+                    { title: "XL", value: "XL" },
+                    { title: "XXL", value: "XXL" },
+                    { title: "36", value: "36" },
+                    { title: "37", value: "37" },
+                    { title: "38", value: "38" },
+                    { title: "39", value: "39" },
+                    { title: "40", value: "40" },
+                    { title: "41", value: "41" },
+                    { title: "42", value: "42" },
+                    { title: "43", value: "43" },
+                    { title: "44", value: "44" },
+                    { title: "45", value: "45" },
 
-                   
+
                 ]
-                
-              }
-            },
+
+            }
+        },
     ],
 }

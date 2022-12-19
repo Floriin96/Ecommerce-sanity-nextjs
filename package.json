@@ -1,110 +1,44 @@
 {
- 
   "name": "richardson",
- 
   "version": "0.1.0",
- 
   "private": true,
- 
   "scripts": {
- 
-   
-  "email": "node ./pages/api/nodemailer.mjs",
- 
-   
-  "dev": "next dev",
- 
-   
-  "build": "next build",
- 
-   
-  "start": "next start -p 80",
- 
-   
-  "lint": "next lint"
- 
+    "email": "node ./pages/api/nodemailer.mjs",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "sanity start",
+    "lint": "next lint"
   },
- 
   "dependencies": {
- 
-   
-  "@babel/core": "^7.20.5",
- 
-   
-  "@emailjs/browser": "^3.10.0",
- 
-   
-  "@react-icons/all-files": "^4.1.0",
- 
-   
-  "@sanity/client": "^3.3.6",
- 
-   
-  "@stripe/stripe-js": "^1.36.0",
- 
-   
-  "@tinyhttp/app": "^2.0.25",
- 
-   
-  "axios": "^1.2.0",
- 
-   
-  "canvas-confetti": "^1.5.1",
- 
-   
-  "cors": "^2.8.5",
- 
-   
-  "dotenv": "^16.0.3",
- 
-   
-  "express": "^4.18.2",
- 
-   
-  "next": "12.3.0",
- 
-   
-  "next-sanity-image": "^4.1.0",
- 
-   
-  "nodemailer": "^6.8.0",
- 
-   
-  "preact": "^10.11.3",
- 
-   
-  "preact-render-to-string": "^5.2.6",
- 
-   
-  "react": "18.2.0",
- 
-   
-  "react-dom": "18.2.0",
- 
-   
-  "react-hot-toast": "^2.3.0",
- 
-   
-  "react-icons": "^4.4.0",
- 
-   
-  "render": "^0.1.4",
- 
-   
-  "stripe": "^10.8.0"
- 
+    "@babel/core": "^7.20.5",
+    "@emailjs/browser": "^3.10.0",
+    "@react-icons/all-files": "^4.1.0",
+    "@sanity/client": "^3.3.6",
+    "@stripe/stripe-js": "^1.36.0",
+    "@tinyhttp/app": "^2.0.25",
+    "axios": "^1.2.0",
+    "canvas-confetti": "^1.5.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "next": "12.3.0",
+    "next-sanity-image": "^4.1.0",
+    "next-videos": "^1.5.0",
+    "nodemailer": "^6.8.0",
+    "preact": "^10.11.3",
+    "preact-render-to-string": "^5.2.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hot-toast": "^2.3.0",
+    "react-icons": "^4.4.0",
+    "react-player": "^2.11.0",
+    "react-youtube": "^10.1.0",
+    "render": "^0.1.4",
+    "stripe": "^10.8.0"
   },
- 
   "devDependencies": {
- 
-   
-  "@babel/preset-react": "^7.18.6",
- 
-   
-  "eslint": "^8.23.0",
- 
-   
-  "eslint-config-next": "^12.3.0"
- 
+    "@babel/preset-react": "^7.18.6",
+    "eslint": "^8.23.0",
+    "eslint-config-next": "^12.3.0"
   }
 }

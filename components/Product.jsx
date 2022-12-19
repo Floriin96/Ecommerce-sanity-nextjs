@@ -3,10 +3,10 @@ import Link from 'next/link';
 
 import { urlFor } from '../lib/client';
 
-const Product = ({ product: { image, name, slug, price, sizes } }) => {
-  return (
+const Product = ({ product: { image, name, slug, price, } }) => {
+  return slug?.current ? (
     <div>
-      <Link href={`/product/${slug.current}`}>
+      <Link href={`/product/${slug?.current}`}>
         <div className="product-card">
           <img
             src={urlFor(image && image[0])}
@@ -16,11 +16,13 @@ const Product = ({ product: { image, name, slug, price, sizes } }) => {
           />
           <p className="product-name">{name}</p>
           <p className="product-price">{price}Lei</p>
-          <p className="sizes">{}</p> 
+          <p className="sizes">{ }</p>
+
+
         </div>
       </Link>
     </div>
-  )
+  ) : null
 }
 
 export default Product
