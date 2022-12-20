@@ -17,7 +17,7 @@ const Products = ({
 
   const productsToShow = useMemo(() => {
     return category
-      ? products.filter((p) => p.category._ref === category._id)
+      ? products.filter((p) => p?.category?._ref === category?._id)
       : products;
   }, [category, products]);
 

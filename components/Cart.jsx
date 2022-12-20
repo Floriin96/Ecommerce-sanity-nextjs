@@ -42,8 +42,8 @@ const Cart = () => {
   const router = useRouter();
 
   return (
-    <div className="cart-wrapper" ref={cartRef} id={id}>
-      <div className="cart-container">
+    <div className="cart-wrapper">
+      <div className="cart-container" ref={cartRef} id={id}>
         <button
           type="button"
           className="cart-heading"
