@@ -1,0 +1,58 @@
+.desktopMenu {
+  display: none;
+}
+.containerBtns {
+  display: flex;
+  gap: 1em;
+}
+.hamburguerBtn {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.mobileMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+}
+.mobileMenu .menu {
+  list-style: none;
+  text-align: center;
+}
+.mobileMenu .menu {
+  position: absolute;
+  width: 100%;
+  z-index: 9999;
+  right: 0;
+  top: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 1.5em;
+}
+.mobileMenu .menu span {
+  transition: color 0.3s;
+  display: inline-block;
+  padding: 0.25em;
+}
+
+.mobileMenu .menu a:hover span {
+  color: #efb810;
+}
+
+@media screen and (min-width: 820px) {
+  .mobileMenu {
+    display: none;
+  }
+  .desktopMenu {
+    display: block;
+  }
+  .hamburguerBtn {
+    display: none;
+  }
+}

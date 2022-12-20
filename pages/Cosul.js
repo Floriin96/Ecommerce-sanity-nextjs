@@ -3,7 +3,6 @@ import Link from "next/link";
 import {
   AiOutlineMinus,
   AiOutlinePlus,
-  AiOutlineLeft,
   AiOutlineShopping,
 } from "react-icons/ai";
 import { TiDeleteOutline } from "react-icons/ti";
@@ -11,49 +10,29 @@ import { useRouter } from "next/router";
 import { useStateContext } from "../context/StateContext";
 import { urlFor } from "../lib/client";
 
-// const { showCart, setShowCart, totalQuantities} = useStateContext();
-
-const Cart = () => {
-  const cartRef = useRef();
+const CartPage = () => {
   const {
     totalPrice,
-    totalQuantities,
     cartItems,
-    showCart,
     setShowCart,
     toggleCartItemQuanitity,
     onRemove,
   } = useStateContext();
-  const id = "cartContainer";
-
-  useEffect(() => {
-    const handler = (event) => {
-      const target = event.target;
-      if (showCart && !target.closest("#" + id)) {
-        setShowCart(false);
-      }
-    };
-    document.addEventListener("click", handler);
-    return () => {
-      document.removeEventListener("click", handler);
-    };
-  }, []);
 
   const router = useRouter();
 
   return (
-    <div className="cart-wrapper" ref={cartRef} id={id}>
-      <div className="cart-container">
-        <button
-          type="button"
-          className="cart-heading"
-          onClick={() => setShowCart(false)}
-        >
-          <AiOutlineLeft></AiOutlineLeft>
-          <span className="heading">COSUL TAU</span>
-          <span className="cart-num-items">({totalQuantities} items)</span>
-        </button>
-
+    <div>
+      <div
+        className="cart-container"
+        style={{
+          margin: "auto",
+          float: "none",
+          background: "black",
+          color: "white",
+          zIndex: 10,
+        }}
+      >
         {cartItems.length < 1 && (
           <div className="empty-cart">
             <AiOutlineShopping size={150}></AiOutlineShopping>
@@ -70,7 +49,15 @@ const Cart = () => {
           </div>
         )}
 
-        <div className="product-container">
+        <div
+          className="product-container"
+          style={{
+            height: "auto",
+            maxHeight: "none",
+            border: "1px solid var(--gold)",
+            borderRadius: "1.5em",
+          }}
+        >
           {cartItems.length >= 1 &&
             cartItems.map((item, key) => (
               <div className="product" key={key}>
@@ -123,7 +110,10 @@ const Cart = () => {
             ))}
         </div>
         {cartItems.length >= 1 && (
-          <div className="cart-bottom">
+          <div
+            className="cart-bottom"
+            style={{ position: "relative", bottom: "auto" }}
+          >
             <div className="total">
               <h3>Total:</h3>
               <h3>{totalPrice}Lei</h3>
@@ -144,4 +134,5 @@ const Cart = () => {
     </div>
   );
 };
-export default Cart;
+
+export default CartPage;
