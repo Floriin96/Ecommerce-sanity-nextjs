@@ -9,6 +9,11 @@ export default {
       type: "string",
     },
     {
+      name: "hidden",
+      title: "Hidden",
+      type: "boolean",
+    },
+    {
       name: "sections",
       title: "Section",
       type: "array",
