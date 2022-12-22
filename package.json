@@ -12,6 +12,7 @@
   "dependencies": {
     "@babel/core": "^7.20.5",
     "@emailjs/browser": "^3.10.0",
+    "@portabletext/react": "^2.0.0",
     "@react-icons/all-files": "^4.1.0",
     "@sanity/client": "^3.3.6",
     "@stripe/stripe-js": "^1.36.0",

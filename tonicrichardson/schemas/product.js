@@ -2,12 +2,28 @@ export default {
   name: "product",
   title: "Product",
   type: "document",
+  initialValue: {
+    hidden: false,
+  },
   fields: [
     {
-      name: "category",
-      title: "Category",
-      type: "reference",
-      to: [{ type: "category" }],
+      name: "name",
+      title: "Name",
+      type: "string",
+    },
+    {
+      name: "hidden",
+      title: "Hidden",
+      type: "boolean",
+    },
+    {
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      options: {
+        source: "name",
+        maxLength: 90,
+      },
     },
     {
       name: "image",
@@ -19,18 +35,17 @@ export default {
       },
     },
     {
-      name: "name",
-      title: "Name",
-      type: "string",
-    },
-    {
-      name: "slug",
-      title: "Slug",
-      type: "slug",
-      options: {
-        source: "name",
-        maxLength: 90,
-      },
+      name: "categories",
+      title: "Categories",
+      type: "array",
+      of: [
+        {
+          name: "category",
+          title: "Category",
+          type: "reference",
+          to: [{ type: "category" }],
+        },
+      ],
     },
     {
       name: "price",

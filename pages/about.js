@@ -1,9 +1,23 @@
-import React from 'react'
+import React from "react";
+import { client } from "../lib/client";
+import AboutView from "../views/About";
 
-const about = () => {
-  return (
-    <div>about</div>
-  )
-}
+const About = ({ about }) => {
+  const sections = about?.sections;
+  if (!sections) return null;
 
-export default about
+  return <AboutView sections={sections} />;
+};
+
+export const getServerSideProps = async () => {
+  const query = '*[_type == "about"]';
+  const abouts = await client.fetch(query);
+
+  const about = abouts.pop();
+
+  return {
+    props: { about },
+  };
+};
+
+export default About;

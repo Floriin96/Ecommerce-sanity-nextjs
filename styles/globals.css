@@ -25,6 +25,7 @@ a {
   max-width: 1400px;
   margin: auto;
   width: 100%;
+  color: white;
 }
 
 body {
@@ -47,7 +48,7 @@ body {
   max-width: 1400px;
   max-height: 60px;
   border-radius: 15px;
-  margin: var(--padding-layout);
+  margin: var(--padding-layout) auto;
 }
 
 .marquee-text {
@@ -209,6 +210,9 @@ span.text-red {
   line-height: 1;
   width: 100%;
   margin-top: 2%;
+}
+.hero-banner-container h3 {
+  color: black;
 }
 
 .hero-banner-container .beats-solo {
@@ -449,7 +453,6 @@ span.text-red {
 }
 
 .empty-cart h3 {
-  margin-left: 40px;
   font-weight: 600;
   font-size: 20px;
 }
@@ -529,13 +532,11 @@ span.text-red {
 }
 
 .btn {
-  width: 200px;
-  max-width: 400;
+  max-width: 200px;
   padding: 10px 12px;
   border-radius: 15px;
   border: 2px solid #efb810;
   font-size: 20px;
-  margin-left: 40px;
   margin-top: 10px;
   margin-top: 40px;
   text-transform: uppercase;
@@ -618,7 +619,8 @@ span.text-red {
   background-color: #efb810;
 
   width: 400px;
-  height: 400px;
+  max-width: 100%;
+  max-height: 400px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
@@ -845,6 +847,10 @@ span.text-red {
   margin-top: 10px;
 }
 
+.primaImagine img {
+  max-width: 100%;
+}
+
 @media screen and (min-width: 820px) {
   .primaImagine {
     display: none;
@@ -954,11 +960,11 @@ span.text-red {
 
   .product-detail-container {
     flex-wrap: wrap;
+    margin: 20px;
   }
 
   .product-detail-container .product-detail-image {
     width: 350px;
-    height: 350px;
   }
 
   .cart-container {
@@ -989,10 +995,6 @@ span.text-red {
 
   .buttons .buy-now {
     width: 150px;
-  }
-
-  .product-detail-container {
-    margin: 20px;
   }
 
   @media screen and (max-width: 770px) {

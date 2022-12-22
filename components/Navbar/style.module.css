@@ -1,3 +1,23 @@
+.topHeaderContainer {
+  background: rgba(250, 250, 250, 0.1);
+  padding: 5px 15px;
+  color: rgba(250, 250, 250, 0.7);
+  font-size: 0.9em;
+  letter-spacing: 1.2px;
+}
+.topHeader {
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+.containerSocialNetworks {
+  display: flex;
+  gap: 0.75em;
+  align-items: center;
+}
+
 .desktopMenu {
   display: none;
 }

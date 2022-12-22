@@ -19,48 +19,42 @@ const Navbar = () => {
 
   return (
     <>
-      <div
-        style={{
-          background: "rgba(250,250,250,0.1)",
-          padding: "5px 15px",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          color: "rgba(250,250,250,0.7)",
-          fontSize: ".9em",
-          letterSpacing: "1.2px",
-        }}
-      >
-        <span style={{}}>PRESTIGE by Viorica Ancuta Carcu</span>
-        <div style={{ display: "flex", gap: ".75em", alignItems: "center" }}>
-          <span>Follow us on our social networks</span>
-          <a
-            href="https://www.facebook.com/profile.php?id=100083570947798"
-            target="_blank"
-          >
-            <span>
-              <ImFacebook color="white" style={{ cursor: "pointer" }} />
-            </span>
-          </a>
-          <a href="https://www.instagram.com/vioricaancuta/" target="_blank">
-            <span>
-              <BsInstagram color="white" style={{ cursor: "pointer" }} />
-            </span>
-          </a>
-          <a href="https://www.youtube.com/@Toni-CRichardson" target="_blank">
-            <span>
-              <FiYoutube
-                color="white"
-                fontSize={"1.3em"}
-                style={{ cursor: "pointer" }}
-              />
-            </span>
-          </a>
-          <a href="https://www.tiktok.com/@ancutavioricacarcu" target="_blank">
-            <span>
-              <FaTiktok color="white" style={{ cursor: "pointer" }} />
-            </span>
-          </a>
+      <div className={classes.topHeaderContainer}>
+        <div className={classes.topHeader}>
+          <span>PRESTIGE by Viorica Ancuta Carcu</span>
+          <div className={classes.containerSocialNetworks}>
+            <span>Follow us on our social networks</span>
+            <a
+              href="https://www.facebook.com/profile.php?id=100083570947798"
+              target="_blank"
+            >
+              <span>
+                <ImFacebook color="white" style={{ cursor: "pointer" }} />
+              </span>
+            </a>
+            <a href="https://www.instagram.com/vioricaancuta/" target="_blank">
+              <span>
+                <BsInstagram color="white" style={{ cursor: "pointer" }} />
+              </span>
+            </a>
+            <a href="https://www.youtube.com/@Toni-CRichardson" target="_blank">
+              <span>
+                <FiYoutube
+                  color="white"
+                  fontSize={"1.3em"}
+                  style={{ cursor: "pointer" }}
+                />
+              </span>
+            </a>
+            <a
+              href="https://www.tiktok.com/@ancutavioricacarcu"
+              target="_blank"
+            >
+              <span>
+                <FaTiktok color="white" style={{ cursor: "pointer" }} />
+              </span>
+            </a>
+          </div>
         </div>
       </div>
       <div className="navbar-container">

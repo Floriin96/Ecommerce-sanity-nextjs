@@ -6,4 +6,5 @@ export { default as HeroBanner } from "./HeroBanner";
 export { default as FooterBanner } from "./FooterBanner";
 export { default as Cart } from "./Cart";
 export { default as CardsHome } from "./CardsHome";
-export { default as Products } from "./Products";
+export { default as ProductsWithCategories } from "./ProductsWithCategories";
+export { default as MarkedImage } from "./MarkedImage";

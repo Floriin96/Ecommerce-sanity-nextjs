@@ -1,23 +1,28 @@
 import React, { useState, useMemo } from "react";
-import { Product } from "../../components";
+import { Product } from "..";
 import classes from "./style.module.css";
 
-const Products = ({
+const ProductsWithCategories = ({
   defaultCategory,
   categories,
   products,
   className = "",
   ...props
 }) => {
+  products = products.map((p) => ({ ...p, categories: p.categories || [] }));
   const [category, setCategory] = useState(defaultCategory || null);
 
   const toogleCategory = (cat) => {
     setCategory(category?._id === cat?._id ? null : cat);
   };
 
+  console.log(category);
+
   const productsToShow = useMemo(() => {
     return category
-      ? products.filter((p) => p?.category?._ref === category?._id)
+      ? products.filter((p) =>
+          p?.categories.some((cat) => cat?._ref === category?._id)
+        )
       : products;
   }, [category, products]);
 
@@ -74,4 +79,4 @@ const Products = ({
   );
 };
 
-export default Products;
+export default ProductsWithCategories;

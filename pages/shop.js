@@ -1,10 +1,10 @@
 import React from "react";
-import { Products } from "../components";
+import { ProductsWithCategories } from "../components";
 import { client } from "../lib/client";
 
 const Shop = ({ category, categories, products }) => {
   return (
-    <Products
+    <ProductsWithCategories
       products={products}
       categories={categories}
       defaultCategory={category}
